@@ -1,0 +1,12 @@
+services:
+  devops-ai-agent:
+    build: .
+    container_name: devops_ai_agent
+    ports:
+      - "4999:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
