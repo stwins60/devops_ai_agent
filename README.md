@@ -16,11 +16,14 @@ This project provides an AI-powered API for analyzing Jenkins build logs and sug
 
 
 ## Requirements
+
 - Docker & Docker Compose (recommended)
 - Or: Python 3.11+
 - A `.env` file with the following variables:
   - `OPENAI_API_KEY` (for OpenAI GPT-4, optional if only using Ollama)
   - `OLLAMA_BASE_URL` (for Ollama, optional if only using OpenAI)
+
+**Note:** The agent will automatically use OpenAI if available and valid, and will fall back to Ollama if OpenAI is unavailable or fails (including invalid API key). No restart is required if you update your `.env` or if one LLM becomes unavailable.
 
 Example `.env`:
 ```env
