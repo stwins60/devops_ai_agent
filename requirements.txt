@@ -8,3 +8,4 @@ langchain-community
 python-dotenv
 python-multipart
 requests
+langchain-openai
